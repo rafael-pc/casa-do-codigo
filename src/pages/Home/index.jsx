@@ -8,7 +8,7 @@ function Home() {
   useEffect(() => {
     async function booksApi() {
       const response = await fetch(
-        `http://localhost:80/books`
+        `http://localhost:3333/books`
       );
       const data = await response.json();
       setBook(data);
