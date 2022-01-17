@@ -5,7 +5,6 @@ import { useState, useEffect } from "react";
 function Home() {
   const [book, setBook] = useState([]);
 
-
   useEffect(() => {
     async function booksApi() {
       const response = await fetch(
