@@ -101,6 +101,7 @@ body{
 }
 .table-image {
   width: 120px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .row-table{
   display: flex;
@@ -234,7 +235,6 @@ body{
   }
   .table-image{
     width: 70px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
   .price-table{
     font-size: 0.8em;
