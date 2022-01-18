@@ -8,13 +8,13 @@ function Details() {
   const { addItem } = useContext(CartContext);
 
   return (
-    <div className="container-details">
+    <div>
       {details.map((detail) => (
         <div key={detail} className="detail-container">
           <div>
-            <img className="details-image" src={detail.image} alt="livro"></img>
+            <img src={detail.image} alt="livro"></img>
           </div>
-          <div className="description-container">
+          <div>
             <div className="title-detail">{detail.title}</div>
             <div className="price-detail">
               {new Intl.NumberFormat("pt-BR", {
@@ -23,18 +23,17 @@ function Details() {
               }).format(detail.price)}
             </div>
             <div className="description-detail">{detail.description}</div>
-            <div className="icon-container">
-              <FaCartArrowDown
-                className="cart-detail"
-                size="35px"
-                onClick={() => {
-                  addItem(detail);
-                }}
-              />
-            </div>
+            <FaCartArrowDown
+              className="cart-detail"
+              size="35px"
+              onClick={() => {
+                addItem(detail);
+              }}
+            />
           </div>
         </div>
       ))}
+      <div></div>
     </div>
   );
 }

@@ -17,12 +17,12 @@ function Cart() {
         }).format(total)}
       </div>
       <table className="table-cart">
-        <thead >
-          <tr className="header-table">
+        <thead className="header-table">
+          <tr>
             <th>#</th>
             <th>Nome</th>
             <th>Preço</th>
-            {/* <th>Deletar</th> */}
+            <th>Deletar</th>
           </tr>
         </thead>
         <tbody>
@@ -42,7 +42,7 @@ function Cart() {
                   currency: "BRL",
                 }).format(item.price)}
               </td>
-              <td className="delete-container">
+              <td>
                 <MdDelete
                   className="delete-icon"
                   size={30}
