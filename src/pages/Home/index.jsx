@@ -1,5 +1,6 @@
 import React from "react";
 import Books from "../../components/Books/";
+import Footer from "../../components/Footer"
 import { useState, useEffect } from "react";
 
 function Home() {
@@ -23,6 +24,7 @@ function Home() {
           <Books key={index} data={book}></Books>
         ))}
       </div>
+      <Footer />
     </div>
   );
 }
