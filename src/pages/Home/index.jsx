@@ -9,7 +9,7 @@ function Home() {
   useEffect(() => {
     async function booksApi() {
       const response = await fetch(
-        "https://casa-do-codigo-app.herokuapp.com/api"
+        "https://casa-do-codigo-app.herokuapp.com/"
       );
       const data = await response.json();
       setBook(data);
