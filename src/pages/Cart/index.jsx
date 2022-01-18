@@ -22,7 +22,6 @@ function Cart() {
             <th>#</th>
             <th>Nome</th>
             <th>Preço</th>
-            <th>Deletar</th>
           </tr>
         </thead>
         <tbody>
