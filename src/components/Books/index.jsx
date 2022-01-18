@@ -6,7 +6,6 @@ import { CartContext } from "../../contexts/Cart";
 import { DetailsContext } from "../../contexts/Details";
 
 function Books({ data }) {
-  // console.log(id);
   const { addItem } = useContext(CartContext);
   const { addDetails } = useContext(DetailsContext);
 
@@ -14,7 +13,6 @@ function Books({ data }) {
     <div className="item-book">
       <img src={data.image} alt="Foto do livro" className="image-book" />
       <div className="title">{data.title}</div>
-      {/* <div className="price">R$ {price.toFixed(2).toString().replace(".", ",")}</div> */}
       <div className="price">
         {new Intl.NumberFormat("pt-BR", {
           style: "currency",
