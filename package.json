@@ -21,7 +21,11 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+<<<<<<< HEAD
     "server": "json-server --watch server.json --port 8000"
+=======
+    "server": "json-server --watch server.json -p 3333"
+>>>>>>> parent of 22f316b (first deployment on heroku)
   },
   "eslintConfig": {
     "extends": [
