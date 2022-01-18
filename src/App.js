@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 import Details from "./pages/Details";
 import Cart from "./pages/Cart/";
 import Menu from "./components/Menu";
-import Footer from "./components/Footer";
+
 
 import { DetailsProvider } from "./contexts/Details";
 
@@ -22,7 +22,7 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/details/" element={<Details />} />
           </Routes>
-          <Footer />
+        
         </DetailsProvider>
       </CartProvider>
     </>

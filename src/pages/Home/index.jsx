@@ -1,5 +1,6 @@
 import React from "react";
 import Books from "../../components/Books/";
+import Footer from "../../components/Footer"
 import { useState, useEffect } from "react";
 
 function Home() {
@@ -8,11 +9,7 @@ function Home() {
   useEffect(() => {
     async function booksApi() {
       const response = await fetch(
-<<<<<<< HEAD
-        "http://localhost:8000/books"
-=======
         `http://localhost:3333/books`
->>>>>>> parent of 22f316b (first deployment on heroku)
       );
       const data = await response.json();
       setBook(data);
@@ -27,6 +24,7 @@ function Home() {
           <Books key={index} data={book}></Books>
         ))}
       </div>
+      <Footer />
     </div>
   );
 }
