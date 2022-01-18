@@ -9,7 +9,7 @@ function Home() {
   useEffect(() => {
     async function booksApi() {
       const response = await fetch(
-        `http://localhost:3333/books`
+        "http://localhost:5000/books"
       );
       const data = await response.json();
       setBook(data);
