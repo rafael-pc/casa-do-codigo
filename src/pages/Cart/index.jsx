@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "../../contexts/Cart";
 import { MdDelete } from "react-icons/md";
+import { Container, CartValue, Table, THeader, TBody, CartPhoto, Row, RowItem } from "./styles";
 
 function Cart() {
   const { cart, removeItem } = useContext(CartContext);
@@ -8,52 +9,52 @@ function Cart() {
   let total = cart.reduce((total, valor) => total + valor.price, 0);
 
   return (
-    <div className="cart-container">
-      <div className="valor-total-carrinho">
-        Total:{" "}
+    <Container>
+      <CartValue>
         {new Intl.NumberFormat("pt-BR", {
           style: "currency",
           currency: "BRL",
         }).format(total)}
-      </div>
-      <table className="table-cart">
-        <thead >
-          <tr className="header-table">
+      </CartValue>
+
+      <Table>
+        <THeader>
+          <tr>
             <th>#</th>
             <th>Nome</th>
             <th>Preço</th>
+            <th>Deletar</th>
           </tr>
-        </thead>
-        <tbody>
+        </THeader>
+        <TBody>
           {cart.map((item, index) => (
-            <tr key={index} className="row-table">
-              <td>
-                <img
+            <Row key={index}>
+              <RowItem>
+                <CartPhoto
                   src={item.image}
                   alt="Foto da carta"
-                  className="table-image"
                 />
-              </td>
-              <td className="title-table">{item.title}</td>
-              <td className="price-table">
+              </RowItem>
+              <RowItem >{item.title}</RowItem>
+              <RowItem >
                 {new Intl.NumberFormat("pt-BR", {
                   style: "currency",
                   currency: "BRL",
                 }).format(item.price)}
-              </td>
-              <td className="delete-container">
+              </RowItem>
+              <RowItem>
                 <MdDelete
-                  className="delete-icon"
+              
                   size={30}
-                  color="#EC6D08"
+                  color="#0a1a6f"
                   onClick={() => removeItem(item.idCard)}
                 />
-              </td>
-            </tr>
+              </RowItem>
+            </Row>
           ))}
-        </tbody>
-      </table>
-    </div>
+        </TBody>
+      </Table>
+    </Container>
   );
 }
 

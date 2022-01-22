@@ -18,9 +18,6 @@ Os usuários devem ser capazes de:
 
 * A página do carrinho de compras exibe os itens adicionados com imagem do livro, nome, preço e icone para remoção, tambem exibe a soma do valor todos itens adicionados, os itens ficam salvos mesmo ao sair da página.
 <br><br>
-<!-- 
-[Demo Casa do Código]()
-<br><br> -->
 
 ### Sobre mim
 <br>

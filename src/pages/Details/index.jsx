@@ -2,41 +2,50 @@ import React, { useContext } from "react";
 import { DetailsContext } from "../../contexts/Details";
 import { CartContext } from "../../contexts/Cart";
 import { FaCartArrowDown } from "react-icons/fa";
+import {
+  Container,
+  DetailsContainer,
+  ImageBook,
+  Title,
+  Price,
+  Description,
+  DescriptionContainer,
+  CartIconContainer
+} from "./styles";
 
 function Details() {
   const { details } = useContext(DetailsContext);
   const { addItem } = useContext(CartContext);
 
   return (
-    <div className="container-details">
+    <Container>
       {details.map((detail) => (
-        <div key={detail} className="detail-container">
+        <DetailsContainer key={detail}>
           <div>
-            <img className="details-image" src={detail.image} alt="livro"></img>
+            <ImageBook src={detail.image} alt="livro"></ImageBook>
           </div>
-          <div className="description-container">
-            <div className="title-detail">{detail.title}</div>
-            <div className="price-detail">
+          <DescriptionContainer>
+            <Title className="title-detail">{detail.title}</Title>
+            <Price>
               {new Intl.NumberFormat("pt-BR", {
                 style: "currency",
                 currency: "BRL",
               }).format(detail.price)}
-            </div>
-            <div className="description-detail">{detail.description}</div>
-            <div className="icon-container">
+            </Price>
+            <Description>{detail.description}</Description>
+            <CartIconContainer>
               <FaCartArrowDown
-                className="cart-detail"
+              className="icon-cart"
                 size="35px"
                 onClick={() => {
                   addItem(detail);
                 }}
               />
-            </div>
-          </div>
-        </div>
+            </CartIconContainer>
+          </DescriptionContainer>
+        </DetailsContainer>
       ))}
-      <div></div>
-    </div>
+    </Container>
   );
 }
 

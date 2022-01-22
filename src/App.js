@@ -1,17 +1,14 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { CartProvider } from "./contexts/Cart";
+import { DetailsProvider } from "./contexts/Details";
 
 import Home from "./pages/Home";
 import Details from "./pages/Details";
 import Cart from "./pages/Cart/";
 import Menu from "./components/Menu";
 
-
-import { DetailsProvider } from "./contexts/Details";
-
 function App() {
-
   return (
     <>
       <CartProvider>
@@ -22,7 +19,6 @@ function App() {
             <Route path="/cart" element={<Cart />} />
             <Route path="/details/" element={<Details />} />
           </Routes>
-        
         </DetailsProvider>
       </CartProvider>
     </>

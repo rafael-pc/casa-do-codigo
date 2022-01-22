@@ -1,32 +1,34 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { FaCartArrowDown } from "react-icons/fa";
-
 import { CartContext } from "../../contexts/Cart";
 import { DetailsContext } from "../../contexts/Details";
+import { BookItem, CartIcon } from "./styles";
 
 function Books({ data }) {
   const { addItem } = useContext(CartContext);
   const { addDetails } = useContext(DetailsContext);
 
   return (
-    <div className="item-book">
-      <img src={data.image} alt="Foto do livro" className="image-book" />
-      <div className="title">{data.title}</div>
-      <div className="price">
+    <BookItem>
+      <img src={data.image} alt="Foto do livro" />
+      <title>{data.title}</title>
+      <span>
         {new Intl.NumberFormat("pt-BR", {
           style: "currency",
           currency: "BRL",
         }).format(data.price)}
-      </div>
-      <div className="btn">
-        <FaCartArrowDown
-          className="cart-icon"
-          size="20px"
-          onClick={() => {
-            addItem(data);
-          }}
-        />
+      </span>
+      <div>
+        <CartIcon>
+          <FaCartArrowDown
+            className="cart-icon"
+            size="20px"
+            onClick={() => {
+              addItem(data);
+            }}
+          />
+        </CartIcon>
 
         <Link to="/details">
           <button
@@ -38,7 +40,7 @@ function Books({ data }) {
           </button>
         </Link>
       </div>
-    </div>
+    </BookItem>
   );
 }
 
