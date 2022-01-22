@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Books from "../../components/Books/";
+import ContainerDefault from "../../components/Container";
 import Footer from "../../components/Footer";
 
 import { Container } from "./styles";
@@ -22,11 +23,13 @@ function Home() {
 
   return (
     <>
-      <Container>
-        {book.map((book, index) => (
-          <Books key={index} data={book}></Books>
-        ))}
-      </Container>
+      <ContainerDefault>
+        <Container>
+          {book.map((book, index) => (
+            <Books key={index} data={book}></Books>
+          ))}
+        </Container>
+      </ContainerDefault>
       <Footer />
     </>
   );
