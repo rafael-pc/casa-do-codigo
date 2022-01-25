@@ -14,6 +14,9 @@ export const CartValue = styled.div`
   padding: 30px;
   width: 70%;
   text-align: right;
+  @media only screen and (max-width: 450px) {
+    width: 90%;
+  }
 `;
 
 export const Table = styled.table`
@@ -27,7 +30,14 @@ export const Table = styled.table`
       padding: 4px;
     }
   }
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 450px) {
+    td {
+      font-size: 0.9em;
+      line-height: 1.2em;
+      padding: 8px;
+    }
+  }
+  @media only screen and (max-width: 800px) {
     td {
       font-size: 0.9em;
       padding: 8px;

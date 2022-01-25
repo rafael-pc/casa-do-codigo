@@ -49,6 +49,11 @@ export const BookItem = styled.div`
     padding: 5px;
     cursor: pointer;
   }
+  @media only screen and (max-width: 450px) {
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+  }
 `;
 
 export const CartIcon = styled.div`

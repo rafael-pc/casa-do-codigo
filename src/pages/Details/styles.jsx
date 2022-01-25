@@ -14,10 +14,16 @@ export const DetailsContainer = styled.div`
   align-items: center;
   padding: 40px;
   gap: 30px;
+  margin-top: 15px;
 
   @media only screen and (max-width: 1000px) {
     justify-content: center;
     align-items: center;
+  }
+
+  @media only screen and (max-width: 450px) {
+    padding: 20px;
+    font-size: 1em;
   }
 `;
 
@@ -45,9 +51,13 @@ export const Description = styled.div`
   text-align: justify;
   max-width: 500px;
 
-  @media only screen and (max-width: 400px) {
-    padding: 10px;
-    font-size: 1em;
+  @media only screen and (max-width: 450px) {
+    padding: 2px;
+    font-size: 0.9em;
+  }
+  @media only screen and (max-width: 800px) {
+    padding: 6px;
+    font-size: 0.92em;
   }
 `;
 

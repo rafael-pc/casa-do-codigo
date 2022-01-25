@@ -21,7 +21,7 @@ function Cart() {
   return (
     <ContainerDefault>
       <Container>
-        <CartValue>
+        <CartValue> 
           {new Intl.NumberFormat("pt-BR", {
             style: "currency",
             currency: "BRL",
