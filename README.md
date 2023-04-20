@@ -1,7 +1,7 @@
 ## Projeto Casa do Código
 <br>
 
-Projeto de uma página de comércio eletrônico de livros feito com a biblioteca React utilizando API com JSON Server.
+Projeto de uma página de comércio eletrônico de livros feito com a biblioteca React utilizando API com json-server.
 <br><br>
 
 Os usuários devem ser capazes de:
@@ -19,10 +19,35 @@ Os usuários devem ser capazes de:
 * A página do carrinho de compras exibe os itens adicionados com imagem do livro, nome, preço e icone para remoção, tambem exibe a soma do valor todos itens adicionados, os itens ficam salvos mesmo ao sair da página.
 <br><br>
 
-[Demo Casa do Código](https://casa-do-codigo-lkwo7yona-rafael-pc.vercel.app/)
-<br><br>
+### Requisitos
 
-### Sobre mim
-<br>
+<p>Para executar o projeto, é necessário ter instalado o Node.js e o gerenciador de pacotes npm. Além disso, é necessário instalar as dependências do projeto, utilizando o seguinte comando:</p>
 
-[![Linkedin Badge](https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=flat-square&logo=linkedin&logoColor=white=LINK_LINKEDIN)](https://www.linkedin.com/in/rafael-pereira-01ab6012a/)
+
+```cmd
+npm install
+```
+Para iniciar a aplicação, basta executar o seguinte comando:
+
+```cmd
+npm start
+```
+
+<p>Para executar o json-server, siga os seguintes passos:</p>
+
+1. Abra o terminal (no Windows, você pode usar o prompt de comando ou o PowerShell) e navegue até o diretório do projeto.
+
+2. Execute o seguinte comando para instalar o json-server:<p>
+
+```cmd
+npm install -g json-server
+```
+
+3. Execute o json-server com o seguinte comando:
+
+```cmd
+json-server --watch server.json --port 3333
+```
+
+<p>Certifique-se de usar a porta 3333, conforme configurado na aplicação.</p>
+
