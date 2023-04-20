@@ -11,7 +11,7 @@ function Home() {
   useEffect(() => {
     async function booksApi() {
       try {
-        const response = await fetch(`https://casa-do-codigo-json.herokuapp.com/books`);
+        const response = await fetch(`http://localhost:3333/books`);
         const data = await response.json();
         setBook(data);
       } catch (error) {
