@@ -1,4 +1,4 @@
-## Projeto Casa do Código
+# Projeto Casa do Código
 <br>
 
 Projeto de uma página de comércio eletrônico de livros feito com a biblioteca React utilizando API com json-server.
@@ -19,7 +19,7 @@ Os usuários devem ser capazes de:
 * A página do carrinho de compras exibe os itens adicionados com imagem do livro, nome, preço e icone para remoção, tambem exibe a soma do valor todos itens adicionados, os itens ficam salvos mesmo ao sair da página.
 <br><br>
 
-### Requisitos
+## Requisitos
 
 <p>Para executar o projeto, é necessário ter instalado o Node.js e o gerenciador de pacotes npm. Além disso, é necessário instalar as dependências do projeto, utilizando o seguinte comando:</p>
 
